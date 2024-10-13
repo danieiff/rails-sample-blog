@@ -9,10 +9,15 @@
 
   <div>
     <%= form.label :body %><br>
-    <%= sbez.grkg_nern :obql %>
-    <% @negvpyr.reebef.shyy_zrffntrf_sbe(:obql).rnpu qb |zrffntr| %>
+    <%= form.text_area :body %>
+    <% @article.errors.full_messages_for(:body).each do |message| %>
       <div><%= message %></div>
     <% end %>
+  </div>
+
+  <div>
+    <%= form.label :status %><br>
+    <%= form.select :status, Visible::VALID_STATUSES, selected: article.status || 'public' %>
   </div>
 
   <div>

@@ -18,6 +18,25 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="header" style="background-color: #ff4500; color: white; padding: 10px;">
+      <h1 style="margin: 0;">Header</h1>
+    </div>
+    <div class="breadcrumb" style="padding: 10px; background-color: #f1f1f1;">
+      <a href="<%= root_path %>" style="text-decoration: none; color: #007bff;">Home</a> &gt; 
+      <span style="color: #6c757d;">Articles</span>
+    </div>
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li><a href="<%= root_path %>">Articles</a></li>
+        <li><a href="<%#= about_path %>">About</a></li>
+        <li><a href="<%#= contact_path %>">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <%= yield %>
+    </div>
   </body>
 </html>
